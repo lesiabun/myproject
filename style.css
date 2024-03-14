@@ -44,13 +44,13 @@ ul, li{
 .wrapper{
     min-height: 100%;
     overflow: hidden;
-    max-width: 1112px;
+    display: flex; /*ПРИБИЛИ ПОДВАЛ*/
+    flex-direction: column; /*ПРИБИЛИ ПОДВАЛ*/
 }
 
 /*------------------------------------------*/
 
 .header{
-    position: absolute;
     width: 100%;
     left: 0; /*ОБЯЗАТЕЛЬНО*/
     top: 0; /*ОБЯЗАТЕЛЬНО*/
@@ -62,6 +62,12 @@ ul, li{
     min-height: 104px;
     align-items: center; /*выравнивание объекта по центру*/
     padding: 5px 0;
+}
+
+@media (max-width: 479px) {
+    .header__container{
+        min-height: 85px; 
+    }
 }
 
 .header__menu {
@@ -80,6 +86,12 @@ ul, li{
     }
 }
 
+@media (max-width: 479px) {
+    .header__menu{
+        margin: 0px 0px 0px 20px; 
+    }
+}
+
 .menu__list {
     display: flex;
     flex-wrap: wrap;
@@ -95,10 +107,29 @@ ul, li{
     font-weight: 600;
 }
 
+@media (max-width: 479px) {
+    .menu__link{
+        font-size: 18PX; 
+    }
+}
+
 .contact{
     font-size: 14px;
     color: #FFFFFF;
     padding: 12px 23px;
     background-color: #F87661;
     border-radius: 6px;
+}
+
+/*---ОСНОВА--------------------------------*/
+.main {
+    flex:  1 1 auto; /*прибили подвал*/
+}
+
+
+
+
+/*--ПОДВАЛ---------------*/
+.footer {
+
 }
